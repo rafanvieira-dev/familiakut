@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FamíliaKut</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">FamíliaKut</h1>
+            <nav>
+                <a href="#">Início</a>
+                <a href="#">Perfil</a>
+                <a href="#">Recados</a>
+                <a href="#">Amigos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <aside class="col-left box">
+            <img src="https://via.placeholder.com/150" alt="Foto de Perfil" id="profileImage" class="profile-pic">
+            
+            <input type="file" id="profileInput" accept="image/*" style="display: none;">
+            <label for="profileInput" class="btn-upload">📷 Mudar Foto</label>
+
+            <h2>Tio João</h2>
+            <p>Membro desde: 2026</p>
+            <hr>
+            <div class="stats">
+                <p>⭐️ Fãs: 5</p>
+                <p>🧊 Confiável: 100%</p>
+                <p>😎 Legal: 100%</p>
+                <p>🔥 Sexy: 0%</p>
+            </div>
+        </aside>
+
+        <section class="col-center box">
+            <h2>Mural de Recados</h2>
+            <div class="scrap-form">
+                <textarea id="scrapText" placeholder="Deixe um recado ou uma foto para a família..."></textarea>
+                
+                <div class="form-actions">
+                    <input type="file" id="scrapImage" accept="image/*" class="input-foto">
+                    <button onclick="postarRecado()">Postar</button>
+                </div>
+            </div>
+            
+            <div id="scrapBoard">
+                </div>
+        </section>
+
+        <aside class="col-right">
+            <div class="box grid-box">
+                <h3>Amigos (4)</h3>
+                <div class="grid">
+                    <div class="grid-item"><img src="https://via.placeholder.com/50"><br>Primo 1</div>
+                    <div class="grid-item"><img src="https://via.placeholder.com/50"><br>Vó</div>
+                    <div class="grid-item"><img src="https://via.placeholder.com/50"><br>Mãe</div>
+                    <div class="grid-item"><img src="https://via.placeholder.com/50"><br>Pai</div>
+                </div>
+            </div>
+
+            <div class="box grid-box mt-10">
+                <h3>Comunidades (<span id="countComunidades">2</span>)</h3>
+                
+                <div class="comunidade-form">
+                    <input type="text" id="nomeComunidade" placeholder="Nome da comunidade...">
+                    <button onclick="criarComunidade()">Criar</button>
+                </div>
+
+                <div class="grid" id="gridComunidades">
+                    <div class="grid-item"><img src="https://via.placeholder.com/50"><br>Churrasco de Domingo</div>
+                    <div class="grid-item"><img src="https://via.placeholder.com/50"><br>Amo a minha cama</div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
