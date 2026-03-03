@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - FamíliaKut</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-login">
+
+    <div class="login-container">
+        <div class="login-left">
+            <h1 class="logo-grande">FamíliaKut</h1>
+            <p><strong>Conecte-se com a sua família (sem brigas de política, por favor).</strong></p>
+            <ul class="login-lista">
+                <li>Compartilhe as fotos do almoço de domingo.</li>
+                <li>Deixe depoimentos para a sua avó.</li>
+                <li>Participe da comunidade "Eu amo pavê".</li>
+            </ul>
+        </div>
+
+        <div class="login-right">
+            
+            <div id="formLogin">
+                <h2>Acesse sua conta</h2>
+                <br>
+                <input type="email" placeholder="Seu e-mail" class="input-padrao">
+                <input type="password" placeholder="Sua senha" class="input-padrao">
+                <button class="btn-primario" onclick="entrar()">Entrar</button>
+                
+                <p class="link-troca">
+                    <a href="#" onclick="alternarFormulario('cadastro')">Ainda não tem conta? Cadastre-se aqui.</a>
+                </p>
+            </div>
+
+            <div id="formCadastro" style="display: none;">
+                <h2>Crie seu perfil</h2>
+                <br>
+                <input type="text" placeholder="Nome completo" class="input-padrao">
+                <input type="email" placeholder="E-mail" class="input-padrao">
+                <input type="password" placeholder="Crie uma senha" class="input-padrao">
+                <button class="btn-primario" onclick="cadastrar()">Criar Conta</button>
+                
+                <p class="link-troca">
+                    <a href="#" onclick="alternarFormulario('login')">Já tem uma conta? Entre aqui.</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
